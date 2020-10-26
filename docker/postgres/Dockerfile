@@ -1,5 +1,6 @@
 FROM postgres:11.3 AS postgres
 
-ENV POSTGRES_PASSWORD=password
+ENV POSTGRES_USER postgres
+ENV POSTGRES_PASSWORD password
 
-# COPY init.sql /docker-entrypoint-initdb.d/
+ADD CreateTables.sql /docker-entrypoint-initdb.d/CreateTables.sql
