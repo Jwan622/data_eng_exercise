@@ -10,3 +10,8 @@
 
 __To access the database:__
 - `psql -h localhost -p 8000 -U postgres --password`
+
+
+**To run tests**
+`pytest`
+- note all tests are in the tests folder
