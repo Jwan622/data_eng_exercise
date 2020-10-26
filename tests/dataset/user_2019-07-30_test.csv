@@ -1,0 +1,6 @@
+event_id,user_id,phone_id,property,value,event_ts
+event1,user1,phone1,drinking,NULL,2019-07-01 18:42:45.151967
+event2,user2,phone2,drinking,Yes,2019-07-01 18:42:45.151987
+event3,user3,phone3,sex,F,2019-07-01 18:42:45.152005
+event4,user4,phone4,drinking,Yes,2019-07-01 18:42:46.151987
+event5,user5,phone5,drinking,No,2019-07-01 18:42:47.151987

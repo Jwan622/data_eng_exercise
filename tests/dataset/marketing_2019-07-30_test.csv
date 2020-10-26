@@ -1,0 +1,4 @@
+event_id,phone_id,ad_id,provider,placement,length,event_ts
+event1,phone1,2,Spotify,Bottom,10,2019-07-01 18:42:45.151950
+event2,phone2,1,Spotify,Center,11,2019-07-01 18:42:46.151981
+event3,phone3,3,Facebook,Middle,12,2019-07-01 18:42:47.151981
