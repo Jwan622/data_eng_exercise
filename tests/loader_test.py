@@ -1,98 +1,12 @@
 from app.loader import import_records
 
+
 def test_import_records():
     records = import_records("tests/dataset/*.csv")
     user_records = records['user_records']
     ad_records = records['ad_records']
-    expected_user_records = [
-        {
-            'event_id': 'event1',
-            'user_id': 'user1',
-            'phone_id': 'phone1',
-            'property': 'drinking',
-            'value': 'NULL',
-            'event_ts': '2019-07-01 18:42:45.151967'
-        },
-        {
-            'event_id': 'event2',
-            'user_id': 'user2',
-            'phone_id': 'phone2',
-            'property': 'drinking',
-            'value': 'Yes',
-            'event_ts': '2019-07-01 18:42:45.151987'
-        },
-        {
-            'event_id': 'event3',
-            'user_id': 'user3',
-            'phone_id': 'phone3',
-            'property': 'sex',
-            'value': 'F',
-            'event_ts': '2019-07-01 18:42:45.152005'
-        },
-        {
-            'event_id': 'event4',
-            'user_id': 'user4',
-            'phone_id': 'phone4',
-            'property': 'drinking',
-            'value': 'Yes',
-            'event_ts': '2019-07-01 18:42:46.151987'
-        },
-        {
-            'event_id': 'event5',
-            'user_id': 'user5',
-            'phone_id': 'phone5',
-            'property': 'drinking',
-            'value': 'No',
-            'event_ts': '2019-07-01 18:42:47.151987'
-        }
-    ]
-    expected_ad_records = [
-        {
-            'event_id': 'event1',
-            'phone_id': 'phone1',
-            'ad_id': '2',
-            'provider': 'Spotify',
-            'placement': 'Bottom',
-            'length': '10',
-            'event_ts': '2019-07-01 18:42:45.151950'
-        },
-        {
-            'event_id': 'event2',
-            'phone_id': 'phone2',
-            'ad_id': '1',
-            'provider': 'Spotify',
-            'placement': 'Center',
-            'length': '11',
-            'event_ts': '2019-07-01 18:42:46.151981'
-        },
-        {
-            'event_id': 'event3',
-            'phone_id': 'phone3',
-            'ad_id': '3',
-            'provider': 'Facebook',
-            'placement': 'Middle',
-            'length': '12',
-            'event_ts': '2019-07-01 18:42:47.151981'
-        },
-        {
-            'ad_id': '6',
-            'event_id': 'c9533e2038428ce2fd146f097c940cf5',
-            'event_ts': '2019-07-03 18:42:45.197143',
-            'length': '1906',
-            'phone_id': '50c97ef8cedae6980246a082b04d1c4b',
-            'placement': 'Bottom',
-            'provider': 'Facebook'
-        },
-        {
-            'ad_id': '17',
-            'event_id': 'b96b8f7d1501f7dce3a099ba7fa05f95',
-            'event_ts': '2019-07-03 18:42:45.197160',
-            'length': '2225',
-            'phone_id': 'ba3aacfecf27077b147317f1edd4e6b0',
-            'placement': 'Right',
-            'provider': 'Instagram'
-        },
-    ]
+    expected_user_records = [('event1', 'user1', 'phone1', 'drinking', 'NULL', '2019-07-01 18:42:45.151967'), ('event2', 'user2', 'phone2', 'drinking', 'Yes', '2019-07-01 18:42:45.151987'), ('event3', 'user3', 'phone3', 'sex', 'F', '2019-07-01 18:42:45.152005'), ('event4', 'user4', 'phone4', 'drinking', 'Yes', '2019-07-01 18:42:46.151987'), ('event5', 'user5', 'phone5', 'drinking', 'No', '2019-07-01 18:42:47.151987')]
+    expected_ad_records = [('event1', 'phone1', '2', 'Spotify', 'Bottom', '10', '2019-07-01 18:42:45.151950'), ('event2', 'phone2', '1', 'Spotify', 'Center', '11', '2019-07-01 18:42:46.151981'), ('event3', 'phone3', '3', 'Facebook', 'Middle', '12', '2019-07-01 18:42:47.151981'), ('c9533e2038428ce2fd146f097c940cf5', '50c97ef8cedae6980246a082b04d1c4b', '6', 'Facebook', 'Bottom', '1906', '2019-07-03 18:42:45.197143'), ('b96b8f7d1501f7dce3a099ba7fa05f95', 'ba3aacfecf27077b147317f1edd4e6b0', '17', 'Instagram', 'Right', '2225', '2019-07-03 18:42:45.197160')]
 
     assert(user_records) == expected_user_records
     assert(ad_records) == expected_ad_records
