@@ -20,12 +20,12 @@ def write(key, records):
         print(f"there was an error: {error}")
     finally:
         if connection is not None:
-            cursor.execute(
-                "SELECT table_schema,table_name FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_schema,table_name")
-            rows = cursor.fetchall()
-            for row in rows:
-                print("dropping table: ", row[1])
-                cursor.execute("drop table " + row[1] + " cascade")
+            # cursor.execute(
+            #     "SELECT table_schema,table_name FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_schema,table_name")
+            # rows = cursor.fetchall()
+            # for row in rows:
+            #     print("dropping table: ", row[1])
+            #     cursor.execute("drop table " + row[1] + " cascade")
             cursor.close()
             connection.commit()
             connection.close()
