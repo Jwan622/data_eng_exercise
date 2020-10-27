@@ -13,6 +13,7 @@ CREATE TABLE user_events (
     id serial PRIMARY KEY,
     event_id varchar(255) NOT NULL,
     user_id varchar(255),
+    phone_id varchar(255),
     property varchar(255),
     value varchar(80),
     event_ts date
