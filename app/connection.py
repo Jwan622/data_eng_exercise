@@ -1,7 +1,7 @@
 import psycopg2
 
 
-def connection():
+def connect():
     print("connecting to database...")
     conn = psycopg2.connect(
         dbname="postgres",
