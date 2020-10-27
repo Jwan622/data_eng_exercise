@@ -9,23 +9,12 @@ def write(key, records):
     connection = connect()
     try:
         cursor = connection.cursor()
-        print(f"INSERTING RECORDS INTO {RECORD_KEY_TO_TABLE_NAME[key]} TABLE")
+        print(f"Inserting records into {RECORD_KEY_TO_TABLE_NAME[key]} table")
         cursor.execute(insert_query, records)
-        # retrieve the records from the database
-        records = cursor.fetchall()
-        for i, record in records:
-            print(f"LOADED RECORD: {record}")
-
     except (Exception, psycopg2.DatabaseError) as error:
         print(f"there was an error: {error}")
     finally:
         if connection is not None:
-            # cursor.execute(
-            #     "SELECT table_schema,table_name FROM information_schema.tables WHERE table_schema = 'public' ORDER BY table_schema,table_name")
-            # rows = cursor.fetchall()
-            # for row in rows:
-            #     print("dropping table: ", row[1])
-            #     cursor.execute("drop table " + row[1] + " cascade")
             cursor.close()
             connection.commit()
             connection.close()
