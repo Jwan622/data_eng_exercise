@@ -12,3 +12,7 @@ RECORD_KEY_TO_COLUMNS = {
     AD_RECORDS_KEY: '(event_id, phone_id, ad_id, provider, placement, length, event_ts)',
     USER_RECORDS_KEY: '(event_id, user_id, phone_id, property, value, event_ts)'
 }
+FIELD_NAMES = {
+    USER_RECORDS_KEY: ["event_id", "user_id", "phone_id", "property", "value", "event_ts"],
+    AD_RECORDS_KEY: ["event_id", "phone_id", "ad_id", "provider", "placement", "length", "event_ts"]
+}
