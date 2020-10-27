@@ -1,2 +1,4 @@
-AD_EVENTS_TABLE = 'ad_events'
-USER_EVENTS_TABLE = 'user_events'
+MARKETING_FILE_PREFIX = "marketing"
+USER_FILE_PREFIX = "user"
+USER_RECORDS_KEY = "user_records"
+AD_RECORDS_KEY = "ad_records"

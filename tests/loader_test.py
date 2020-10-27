@@ -73,7 +73,25 @@ def test_import_records():
             'placement': 'Middle',
             'length': '12',
             'event_ts': '2019-07-01 18:42:47.151981'
-        }
+        },
+        {
+            'ad_id': '6',
+            'event_id': 'c9533e2038428ce2fd146f097c940cf5',
+            'event_ts': '2019-07-03 18:42:45.197143',
+            'length': '1906',
+            'phone_id': '50c97ef8cedae6980246a082b04d1c4b',
+            'placement': 'Bottom',
+            'provider': 'Facebook'
+        },
+        {
+            'ad_id': '17',
+            'event_id': 'b96b8f7d1501f7dce3a099ba7fa05f95',
+            'event_ts': '2019-07-03 18:42:45.197160',
+            'length': '2225',
+            'phone_id': 'ba3aacfecf27077b147317f1edd4e6b0',
+            'placement': 'Right',
+            'provider': 'Instagram'
+        },
     ]
 
     assert(user_records) == expected_user_records
