@@ -12,7 +12,7 @@ def write(key, records):
         print(f"Inserting records into {RECORD_KEY_TO_TABLE_NAME[key]} table")
         cursor.execute(insert_query, records)
     except (Exception, psycopg2.DatabaseError) as error:
-        print(f"there was an error: {error}")
+        print(f"There was an error, boo Jeff: {error}")
     finally:
         if connection is not None:
             cursor.close()

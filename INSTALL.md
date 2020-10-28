@@ -30,7 +30,7 @@ and see:
 (1 row)
 ```
 
-###To run tests:
+### To run tests:
 
 `pytest -vv`
 - note all tests are in the tests folder

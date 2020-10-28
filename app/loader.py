@@ -12,7 +12,7 @@ def import_records(path = "dataset/*.csv"):
     }
     for file_path in glob.glob(path):
         with open(file_path, 'r') as file:
-            print(f"Processing {file_path}")
+            print(f"Processing: {file_path}")
             csv_reader = clean_records(file)
             key = AD_RECORDS_KEY if os.path.basename(file_path).startswith(MARKETING_FILE_PREFIX) else USER_RECORDS_KEY
             for row in csv_reader:
