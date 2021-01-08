@@ -2,7 +2,7 @@
 
 ## Overview
 
-Hello and thank you for applying to be a Senior Data Engineer here at Hinge!
+Hello and thank you for applying to be a Senior Data Engineer here at __!
 
 As a Data Engineer, you will be tasked with loading data of various degrees of correctness, performing initial analysis of that data, and providing insight to our stakeholders. In this homework, you will be answering some questions about a dataset using Python and PostgreSQL.
 
